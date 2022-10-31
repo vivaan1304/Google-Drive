@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.username.label(class='form-label') }}
+        {{ form.username(class='form-control', style='size:32') }}
+
+        {{ form.password.label(class='form-label') }}
+        {{ form.password(class='form-control', size = 32) }}
+        
+        <br>
+        {{ form.submit(class='btn btn-primary') }}
+    </form>
+    <a href="{{ url_for('register') }}"> New User? Click To Register </a>
+
+{% endblock %}
